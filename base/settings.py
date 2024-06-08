@@ -40,7 +40,9 @@ DEFAULT_APPS = [
 ]
 
 #Apps created
-APPS = []
+APPS = [
+    'web'
+]
 
 INSTALLED_APPS = DEFAULT_APPS + APPS
 
