@@ -3,10 +3,10 @@ from .models import Publication, Image, Text
 
 class ImageInlineForm(forms.ModelForm):
     class Meta:
-        model = Secundario1
+        model = Image
         fields = ['content', 'order']
 
 class TextInlineForm(forms.ModelForm):
     class Meta:
-        model = Secundario2
+        model = Text
         fields = ['image', 'caption']
