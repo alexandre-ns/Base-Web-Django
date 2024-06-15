@@ -6,7 +6,7 @@ class ImageInlineForm(forms.ModelForm):
         model = Secundario1
         fields = ['content', 'order']
 
-class TextInlineForm(forms.ModelForm):
+'''class TextInlineForm(forms.ModelForm):
     class Meta:
         model = Secundario2
-        fields = ['image', 'caption']
+        fields = ['image', 'caption']'''
