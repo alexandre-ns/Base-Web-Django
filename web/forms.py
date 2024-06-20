@@ -4,13 +4,7 @@ from .models import Message
 '''class ImageInlineForm(forms.ModelForm):
     class Meta:
         model = Image
-        fields = ['content', 'order']
-
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Message
-        fields = ['name', 'email_adress', 'phone_number', 'message_text']'''
-
+        fields = ['content', 'order']'''
 
 class MessageForm(forms.Form):
     name = forms.CharField(
