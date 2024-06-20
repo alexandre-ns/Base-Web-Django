@@ -5,9 +5,14 @@
 
 https://wmazoni-sds1.netlify.app
 
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+simple project web é uma aplicação full stack web criada com Django/bootstrap. O objetivo dessa aplicação é servir como base para projetos web que realizem postagens de texto. Ao rodar a aplicação temos acessivel tanto o web site, quanto o painel de administração django(django admin) lugar onde é possivel gerenciar o contúdo do site assim como parte da aparencia.
 
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
+# Funcionamento
+
+Após iniciar a aplicação temos o ambiente de adminstração django:
+
+
+
 
 ## Layout mobile
 ![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
@@ -21,17 +26,13 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
 
 # Tecnologias utilizadas
-## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
-## Front end
-- HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
+- Python
+- Django
+
+- HTML
+- CSS
+- JavaScript
+
 ## Implantação em produção
 - Back end: Heroku
 - Front end web: Netlify
@@ -39,40 +40,37 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 
 # Como executar o projeto
 
-## Back end
-Pré-requisitos: Java 11
+Pré-requisitos: 
+    - Python 3.12
+    - Django 5.0
+    - pip
 
+Ambiente de desenvolvimento.
 ```bash
+
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/alexandre-ns/Base-Web-Django.git
 
 # entrar na pasta do projeto back end
-cd backend
+cd Base-Web-Django
 
-# executar o projeto
-./mvnw spring-boot:run
+# Instalação de dependências
+pip install -r requirements.txt
+
+# criação dos arquivos de migração
+python manage.py makemigrations
+
+# Aplicação de migrações
+python manage.py migrate
+
+# Inicia servidor Django
+python manage.py runserver
 ```
 
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
+Para uso em ambiente de produção instalar e configurar Servidor Web (Gunicorn, uWSGI, etc.)
 
 # Autor
 
-Wellington Mazoni de Andrade
+Alexandre Nogueira.
 
-https://www.linkedin.com/in/wmazoni
-
+https://www.linkedin.com/in/alexandre-nogueira-4b2329a6/
