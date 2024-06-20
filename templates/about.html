@@ -20,7 +20,6 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{% url 'index' %}">string_about_01</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -35,24 +34,25 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
+        {% with header_image=image %}
+        <header class="masthead" style="background-image: url('{% static header_image %}')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>string_about_02</h1>
-                            <span class="subheading">string_about_03</span>
+                            <h1>{{ about.title }}</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        {% endwith %}
         <!-- Main Content-->
         <main class="mb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>string_about_04</p>
+                        <p>{{ about.content_text }}</p>
                     </div>
                 </div>
             </div>
@@ -64,14 +64,17 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
+                                {% for social_media in media %}
+                                    <li class="list-inline-item">
+                                        <a href="{{ social_media.url }}">
+                                            <span class="fa-stack fa-lg">
+                                                <i class="fas fa-circle fa-stack-2x"></i>
+                                                <i class="fab fa-{{ social_media.type_media }} fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                           <!--  <li class="list-inline-item">
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
@@ -86,7 +89,7 @@
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
-                            </li>
+                            </li>-->
                         </ul>
                         <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2023</div>
                     </div>
