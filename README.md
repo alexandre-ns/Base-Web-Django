@@ -14,7 +14,7 @@ Após iniciar a aplicação temos o ambiente de adminstração django:
 
 
 
-## Layout mobile
+## Django Admin
 ![admin 1](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin01.png)
 
 ## Layout web
