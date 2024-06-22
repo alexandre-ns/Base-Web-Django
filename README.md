@@ -1,51 +1,95 @@
-# Big Game Survey 
+# Basic website post(EM FASE DE TESTES E CORREÇÕES)
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/alexandre-ns/Base-Web-Django/blob/main/LICENSE) 
 
-# Sobre o projeto
+# Sobre projeto Basic website post
 
 https://wmazoni-sds1.netlify.app
 
-simple project web é uma aplicação full stack web criada com Django/bootstrap. O objetivo dessa aplicação é servir como base para projetos web que realizem postagens de texto. Ao rodar a aplicação temos acessivel tanto o web site, quanto o painel de administração django(django admin) lugar onde é possivel gerenciar o contúdo do site assim como parte da aparencia.
+"Basic website post" é uma aplicação full stack web criada com Django/bootstrap. O objetivo dessa aplicação é servir como base para projetos web que realizem postagens de texto. Ao rodar a aplicação temos acessivel tanto o web site, quanto o painel de administração django(django admin) lugar onde é possivel gerenciar o contúdo do site assim como parte da aparencia.
 
 # Funcionamento
 
-Após iniciar a aplicação temos o ambiente de adminstração django:
-
-
-
-
+Após iniciar a aplicação temos o ambiente de adminstração django, que é onde podemos iniciar a montagem do website.
 ## Django Admin
 ![admin 1](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin01.png)
 
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+### CONTATO E MIDIAS SOCIAIS
+![admin 1](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin04.png)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+- Mensagens - Parte onde são exibidas as mensagens enviadas por usuários do website através da página de contato.
 
-# Tecnologias utilizadas
+- Redes Sociais - Criar links para redes sociais que serão exibidas como icones na parte inferior de cada página.
+
+### PUBLICAÇÕES
+![admin 2](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin03.png)
+
+ - Fontes - Fontes que formarão o conteúdo, sendo exibidas no final de cada publicação.
+    - 'Ordem do texto' - Campo que define a ordem que os textos serão exibidas em uma publicação.
+
+- Textos - Textos que formarão o conteúdo da publicação.
+    - 'Ordem do texto' - Campo que define a ordem que os textos serão exibidas em uma publicação.
+
+- Publicações - Lugar indicado para criação de novas postagens, permitindo criar publicações, textos e fontes em um único lugar.
+
+### WEB SITE(**OBRIGATÓRIO)
+![admin 2](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin02.png)
+
+##### Para o Correto funcionamento cada modelo de página deve possuir um e somente um elemento com campo 'Página ativa' ativado.
+- Página Contatos - Construção de tela da página CONTATO 
+- Página Sobre - Construção de tela da página SOBRE.
+- Página Inicial - Construção de tela da página INICIAL.
+
+
+## Tecnologias utilizadas
 - Python
 - Django
 
 - HTML
 - CSS
 - JavaScript
+- *Bootstrap
 
-## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
 
 # Como executar o projeto
 
 Pré-requisitos: 
-    - Python 3.12
-    - Django 5.0
+    - Python
+    - Django
     - pip
+    - Ambiente virtual python(opcional, mas recomendado)
 
-Ambiente de desenvolvimento.
+## Ambiente de produção.
+1. Configurar Variáveis de Ambiente.
+    - SECRET_KEY
+
+3. Configurações variáveis de Segurança.
+    - DEBUG
+    - ALLOWED_HOSTS
+    - SECURE_SSL_REDIRECT
+    - SECURE_HSTS_SECONDS
+    - SECURE_HSTS_INCLUDE_SUBDOMAINS
+      
+4. Configuração de arquivos estáticos e media.
+    - STATIC_ROOT
+    - STATIC_URL
+    - MEDIA_ROOT
+    - MEDIA_URL
+  
+5. Definição de logging para monitoramento de atividades e erros.
+
+6. Configuração de Banco de dados.
+    - DATABASES
+
+7. Instalação/Configuração um servidor de aplicação.(como Gunicorn ou uWSGI)
+
+8. Instalação/configuração de servidor WEB(como Nginx ou Apache)
+
+9. Configuração HTTPS.
+    - SSL(Encrypt)
+    - HTTPS <-> Nginx(Certbot)
+
+### Ambiente de desenvolvimento.
 ```bash
 
 # clonar repositório
@@ -66,8 +110,6 @@ python manage.py migrate
 # Inicia servidor Django
 python manage.py runserver
 ```
-
-Para uso em ambiente de produção instalar e configurar Servidor Web (Gunicorn, uWSGI, etc.)
 
 # Autor
 
