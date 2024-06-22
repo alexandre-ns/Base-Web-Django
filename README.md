@@ -3,9 +3,7 @@
 
 # Sobre projeto Basic website post
 
-https://wmazoni-sds1.netlify.app
-
-"Basic website post" é uma aplicação full stack web criada com Django/bootstrap. O objetivo dessa aplicação é servir como base para projetos web que realizem postagens de texto. Ao rodar a aplicação temos acessivel tanto o web site, quanto o painel de administração django(django admin) lugar onde é possivel gerenciar o contúdo do site assim como parte da aparencia.
+"Basic website post" é uma aplicação full stack web criada com Django/bootstrap. O objetivo dessa aplicação é servir como base para projetos web que realizem postagens de texto. Ao rodar a aplicação temos acessivel tanto o web site, quanto o painel de administração django(django admin) lugar onde é possivel gerenciar o contúdo do site assim como parte da aparência.
 
 # Funcionamento
 
@@ -19,7 +17,7 @@ Após iniciar a aplicação temos o ambiente de adminstração django, que é on
 
 - Mensagens - Parte onde são exibidas as mensagens enviadas por usuários do website através da página de contato.
 
-- Redes Sociais - Criar links para redes sociais que serão exibidas como icones na parte inferior de cada página.
+- Redes Sociais - Criar links para redes sociais que serão exibidas como icones na parte inferior de cada página - X(Twitter), Instagram, Facebook, GitHub
 
 ### PUBLICAÇÕES
 ![admin 2](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/admin03.png)
@@ -39,6 +37,20 @@ Após iniciar a aplicação temos o ambiente de adminstração django, que é on
 - Página Contatos - Construção de tela da página CONTATO 
 - Página Sobre - Construção de tela da página SOBRE.
 - Página Inicial - Construção de tela da página INICIAL.
+
+### Exemplo simples de resultado de Layout web
+![site 5](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/site07.png)
+
+Página Inicial.
+
+![site 6](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/site06.png)
+
+Página Contato.
+
+![site 6](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/site03.png)
+![site 6](https://github.com/alexandre-ns/Assets/blob/main/basic_web_blog/site04.png)
+
+Redes sociais
 
 
 ## Tecnologias utilizadas
