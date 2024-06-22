@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        {% if contact.tab_title != None %} <title>{{ contact.tab_title }}</title> {% endif %}
         <link rel="icon" type="image/x-icon" href="{% static 'ico/favicon.ico' %}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>{{ contact.title  }}</h1>
+                            {% if contact.title != None %} <h1>{{ contact.title }}</h1> {% endif %}
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p> {{ contact.content_text }}</p>
+                        <p> {{ contact.content_text|linebreaksbr }}</p>
                         <div class="my-5">
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -67,7 +67,7 @@
                             <form method="post">
                                 {% csrf_token %}
                                 {{ form.as_p }}
-                                <button type="submit">Send</button>
+                                <button type="submit">ENVIAR</button>
                                 <br />
                                 <!-- Submit success message-->
                                 <!---->

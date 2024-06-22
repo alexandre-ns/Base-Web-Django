@@ -43,6 +43,8 @@ DEFAULT_APPS = [
 #Apps created
 APPS = [
     'web',
+    'publications',
+    'contact'
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + APPS
@@ -126,6 +128,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'web'),
 ]
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -136,5 +139,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = 'images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'web')
