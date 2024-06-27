@@ -12,6 +12,7 @@ class Message(models.Model):
     user_name = models.CharField("Nome", max_length=150)
     email_adress = models.EmailField("Email", max_length=150)
     message_text = models.TextField("Mensagem")
+    sent_on = models.DateTimeField("Data de envio", blank=True, null=True)
     phone_number = models.CharField(
         "Telefone", 
         validators=[phone_regex],
