@@ -36,7 +36,11 @@
         </nav>
         <!-- Page Header-->
         {% with header_image=image %}
-        <header class="masthead" style="background-image: url('{% static header_image %}')">
+        {% if image %}
+            <header class="masthead" style="background-image: url('{% static header_image %}')">
+        {% else %}
+            <header class="masthead">
+        {% endif %}
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -48,7 +52,6 @@
             </div>
         </header>
         {% endwith %}
-
 
         <!-- Main Content-->
         <main class="mb-4">
