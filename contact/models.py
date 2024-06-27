@@ -1,4 +1,4 @@
-"""Module providing a function printing python version."""
+"""Models of CONTATO E MIDIAS SOCIAIS"""
 from django.db import models
 from django.core.validators import RegexValidator
 
@@ -20,18 +20,16 @@ class Message(models.Model):
         null=True
     )
 
-    def __str__(self):
-        return f"{self.name}"
-
     class Meta:
-        """Names"""
         verbose_name = "Mensagem"
         verbose_name_plural = "Mensagens"
 
+    def __str__(self):
+        return f"{self.user_name}"
 
 
 class SocialMedia(models.Model):
-    """ #social networks displayed on the site """
+    """ Social networks displayed on the site """
 
     TWITTER = "twitter"
     INSTAGRAM = "instagram"
@@ -54,13 +52,12 @@ class SocialMedia(models.Model):
     )
     name = models.CharField("Nome identificador", max_length=150, blank=True, null=True)
     url = models.URLField("*URL", max_length=200, unique=True)
-    # Only the elements with the field active=True will be displayed on the site"
-    active = models.BooleanField("*Rede Social ativa", default=False)
+    active = models.BooleanField("*Rede Social ativa", default=False) # Only the elements with
+    #the field active=True will be displayed on the site"
+
+    class Meta:
+        verbose_name = "Rede Social"
+        verbose_name_plural = "Redes Sociais"
 
     def __str__(self):
         return f"{self.name}"
-
-    class Meta:
-        """names"""
-        verbose_name = "Rede Social"
-        verbose_name_plural = "Redes Sociais"
