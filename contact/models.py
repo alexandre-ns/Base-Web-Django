@@ -9,7 +9,7 @@ class Message(models.Model):
         regex=r'^\+?1?\d{9,15}$',
         message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
     )
-    name = models.CharField("Nome", max_length=150)
+    name_user = models.CharField("Nome", max_length=150)
     email_adress = models.EmailField("Email", max_length=150)
     message_text = models.TextField("Mensagem")
     phone_number = models.CharField(
