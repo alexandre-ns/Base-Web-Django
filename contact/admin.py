@@ -3,7 +3,7 @@ from .models import Message, SocialMedia
 
 # only show messages sent by the users
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ('name_user', 'email_adress')
+    list_display = ('user_name', 'email_adress')
 
     def has_add_permission(self, request):
         return False
