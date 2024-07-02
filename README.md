@@ -127,4 +127,4 @@ python manage.py runserver
 
 Alexandre Nogueira.
 
-https://www.linkedin.com/in/alexandre-nogueira-4b2329a6/
+https://www.linkedin.com/in/alexandre-ns/
